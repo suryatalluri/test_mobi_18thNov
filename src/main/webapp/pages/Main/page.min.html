@@ -39,27 +39,22 @@ var _MainPage_Variables_ ={}
     <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-livelist name="livelist3" itemclass="list-group-item" listclass="list-group">
-                <wm-listtemplate name="listtemplate3" layout="panel"></wm-listtemplate>
+            <wm-livelist name="livelist3" dataset="bind:Variables.HrdbEmployeeData.dataSet" itemclass="list-group-item" listclass="list-group" navigation="Advanced">
+                <wm-listtemplate name="listtemplate3" layout="panel">
+                    <wm-panel class="panel-default" name="panel3" showheader="true" collapsible="true" data-template-ctr="true">
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.eid" name="label11" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" name="label12" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.lastname" name="label13" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.street" name="label14" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.city" name="label15" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.state" name="label16" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.zip" name="label17" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.birthdate" name="label18" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.picurl" name="label19" width="100%"></wm-label>
+                        <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.jobtitle" name="label20" width="100%"></wm-label>
+                    </wm-panel>
+                </wm-listtemplate>
             </wm-livelist>
-            <wm-livefilter name="livefilter2" dataset="bind:Variables.HrdbEmployeeData.dataSet" pagesize="10">
-                <wm-layoutgrid name="layoutgrid1">
-                    <wm-gridrow name="gridrow8">
-                        <wm-gridcolumn show="show" name="gridcolumn1" columnwidth="12">
-                            <wm-filter-field type="integer" multiple="false" readonly="false" show="true" required="false" placeholder="Enter value" widget="number" generator="identity" step="1" is-related="false" key="eid" primary-key="false" display-name="Eid"
-                            filter-on="eid" is-range="false" field="eid"></wm-filter-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
-                    <wm-gridrow name="gridrow9">
-                        <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                            <wm-filter-field type="string" multiple="false" readonly="false" show="true" required="false" placeholder="Enter value" widget="text" generator="assigned" is-related="false" key="firstname" primary-key="false" display-name="Firstname"
-                            filter-on="firstname" is-range="false" field="firstname"></wm-filter-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
-                </wm-layoutgrid>
-                <wm-filter-action class="btn-primary" show="true" iconclass="glyphicon glyphicon-filter" key="filter" display-name="Filter" action="filter()"></wm-filter-action>
-                <wm-filter-action class="btn" show="true" iconclass="glyphicon glyphicon-remove-circle" key="clear" display-name="Clear" action="clearFilter()"></wm-filter-action>
-            </wm-livefilter>
         </wm-page-content>
     </wm-content>
 </wm-page>

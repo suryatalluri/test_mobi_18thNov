@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.test_mobi_18thnov.test_18thnov">
+  <class table="`TABLE8`" entity-name="com.test_mobi_18thnov.test_18thnov.Table8">
+    <composite-id name="id" class="Table8Id">
+      <key-property name="column2" type="string">
+        <column name="`COLUMN2`" length="255" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="id" type="integer">
+        <column name="`ID`" length="255" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+  </class>
+  <class table="`TABLE2`" entity-name="com.test_mobi_18thnov.test_18thnov.Table2">
+    <composite-id name="id" class="Table2Id">
+      <key-property name="column2" type="string">
+        <column name="`COLUMN2`" length="255" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="id" type="integer">
+        <column name="`ID`" length="255" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <property name="column3" type="string">
+      <column name="`column3`" length="255" not-null="true" precision="19"/>
+    </property>
+  </class>
+</hibernate-mapping>

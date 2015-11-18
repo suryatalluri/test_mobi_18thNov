@@ -7,7 +7,7 @@
 		"dataBinding": {},
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
-		"_id": "wm-wm.NavigationVariable1389180517517"
+		"_id": "wm-goToPage-Main-wm.NavigationVariable1389180517517"
 	},
 	"supportedLocale": {
 		"name": "supportedLocale",
@@ -31,7 +31,7 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1402640443182"
+		"_id": "wm-supportedLocale-wm.Variable1402640443182"
 	},
 	"deviceInfo": {
 		"name": "deviceInfo",
@@ -80,9 +80,10 @@
 		"geolocationTimeout": 5,
 		"vibrationtime": 2,
 		"category": "wm.DeviceVariable",
-		"_id": "wm-getAppInfo-wm.DeviceVariable-1444134876543"
+		"_id": "wm-appInfo-getAppInfo-wm.DeviceVariable-1444134876543"
 	},
 	"TestprocEmployeeData": {
+		"name": "TestprocEmployeeData",
 		"type": "Employee",
 		"isList": true,
 		"owner": "App",
@@ -170,6 +171,7 @@
 		"bindCount": 1
 	},
 	"TestprocTable2Data": {
+		"name": "TestprocTable2Data",
 		"type": "Table2",
 		"isList": true,
 		"owner": "App",
@@ -228,6 +230,7 @@
 		}
 	},
 	"TestprocTable3Data": {
+		"name": "TestprocTable3Data",
 		"type": "Table3",
 		"isList": true,
 		"owner": "App",
@@ -286,6 +289,7 @@
 		}
 	},
 	"TestprocTable4Data": {
+		"name": "TestprocTable4Data",
 		"type": "Table4",
 		"isList": true,
 		"owner": "App",
@@ -344,6 +348,7 @@
 		}
 	},
 	"HrdbDepartmentData": {
+		"name": "HrdbDepartmentData",
 		"type": "Department",
 		"isList": true,
 		"owner": "App",
@@ -525,9 +530,11 @@
 			"entityName": "Department",
 			"fullyQualifiedName": "com.hrdb.Department",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 0
 	},
 	"HrdbEmployeeData": {
+		"name": "HrdbEmployeeData",
 		"type": "Employee",
 		"isList": true,
 		"owner": "App",
@@ -537,14 +544,79 @@
 		"dataBinding": [
 			{
 				"name": "dataBinding",
-				"type": "object",
-				"fields": []
+				"type": "EMPLOYEE",
+				"fields": [
+					{
+						"name": "eid",
+						"type": "number"
+					},
+					{
+						"name": "firstname",
+						"type": "string"
+					},
+					{
+						"name": "lastname",
+						"type": "string"
+					},
+					{
+						"name": "street",
+						"type": "string"
+					},
+					{
+						"name": "city",
+						"type": "string"
+					},
+					{
+						"name": "state",
+						"type": "string"
+					},
+					{
+						"name": "zip",
+						"type": "string"
+					},
+					{
+						"name": "birthdate",
+						"type": "date"
+					},
+					{
+						"name": "picurl",
+						"type": "string"
+					},
+					{
+						"name": "jobtitle",
+						"type": "string"
+					},
+					{
+						"name": "department",
+						"type": "number"
+					},
+					{
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"name": "password",
+						"type": "string"
+					},
+					{
+						"name": "role",
+						"type": "string"
+					},
+					{
+						"name": "employeeByManagerid",
+						"type": "number"
+					},
+					{
+						"name": "tenantid",
+						"type": "number"
+					}
+				]
 			}
 		],
 		"saveInPhonegap": false,
 		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
+		"maxResults": 5,
+		"designMaxResults": 5,
 		"operation": "read",
 		"startUpdate": true,
 		"autoUpdate": true,
@@ -1345,9 +1417,11 @@
 			"fullyQualifiedName": "com.hrdb.Employee",
 			"tableType": "TABLE"
 		},
-		"bindCount": 1
+		"bindCount": 1,
+		"filterFields": {}
 	},
 	"HrdbUserData": {
+		"name": "HrdbUserData",
 		"type": "User",
 		"isList": true,
 		"owner": "App",
@@ -1462,6 +1536,7 @@
 		}
 	},
 	"HrdbVacationData": {
+		"name": "HrdbVacationData",
 		"type": "Vacation",
 		"isList": true,
 		"owner": "App",
@@ -1844,5 +1919,186 @@
 			"fullyQualifiedName": "com.hrdb.Vacation",
 			"tableType": "TABLE"
 		}
+	},
+	"Test_18thNovTable2Data": {
+		"type": "Table2",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "Test_18thNov",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"dbSystem": "MySQL",
+		"_id": "wm-Test_18thNovTable2Data-wm.LiveVariable-1447840805296",
+		"package": "com.test_mobi_18thnov.test_18thnov.Table2",
+		"tableName": "TABLE2",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "column2",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "COLUMN2",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "column3",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "column3",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": ""
+				}
+			],
+			"primaryKeys": [
+				"column2",
+				"id"
+			],
+			"entityName": "Table2",
+			"fullyQualifiedName": "com.test_mobi_18thnov.test_18thnov.Table2",
+			"tableType": "TABLE"
+		},
+		"properties": [
+			"table8"
+		],
+		"relatedTables": [
+			{
+				"columnName": "column2",
+				"relationName": "table8",
+				"type": "Table8",
+				"package": "com.test_mobi_18thnov.test_18thnov.Table2",
+				"watchOn": "Test_18thNovTable8Data"
+			}
+		]
+	},
+	"Test_18thNovTable8Data": {
+		"type": "Table8",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "Test_18thNov",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"dbSystem": "MySQL",
+		"_id": "wm-Test_18thNovTable8Data-wm.LiveVariable-1447841182866",
+		"package": "com.test_mobi_18thnov.test_18thnov.Table8",
+		"tableName": "TABLE8",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "column2",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "COLUMN2",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": ""
+				}
+			],
+			"primaryKeys": [
+				"column2",
+				"id"
+			],
+			"entityName": "Table8",
+			"fullyQualifiedName": "com.test_mobi_18thnov.test_18thnov.Table8",
+			"tableType": "TABLE"
+		}
+	},
+	"goToPage_Page": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Page",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Page-wm.NavigationVariable-1447841875163"
 	}
 }
